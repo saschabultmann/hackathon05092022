@@ -13,13 +13,23 @@ class PageBloc extends Bloc<PageEvent, PageState> {
       var newSelectedProjects = state.selectedProjects;
       if (event.screen == Screen.Timeline) {
         var res = <DragProject>[];
-        res.add(DragProject(null, 60, false));
-        var height = 8 / state.selectedProjects.length * 60;
-        for (var i = 0; i < state.selectedProjects.length; i++) {
-          res.add(
-              DragProject(state.selectedProjects[i], height.toInt(), false));
+        if (event.useFakeData) {
+          res.add(DragProject(null, 60, false));
+          res.add(DragProject(1, 120, false));
+          res.add(DragProject(null, 15, true));
+          res.add(DragProject(1, 180, false));
+          res.add(DragProject(null, 30, true));
+          res.add(DragProject(2, 135, false));
+          res.add(DragProject(null, 60, false));
+        } else {
+          res.add(DragProject(null, 60, false));
+          var height = 8 / state.selectedProjects.length * 60;
+          for (var i = 0; i < state.selectedProjects.length; i++) {
+            res.add(
+                DragProject(state.selectedProjects[i], height.toInt(), false));
+          }
+          res.add(DragProject(null, 60, false));
         }
-        res.add(DragProject(null, 60, false));
         newProjectList = res;
       } else if (event.screen == Screen.Login) {
         newSelectedProjects = [];

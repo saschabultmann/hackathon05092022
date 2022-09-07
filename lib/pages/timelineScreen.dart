@@ -146,6 +146,7 @@ class Project extends StatelessWidget {
         child: Column(
           children: [
             Text(DB.getProjectById(project.projectId!).name,
+                overflow: TextOverflow.ellipsis,
                 style: TextStyle(
                     fontSize: (project.duration > 40
                         ? 30

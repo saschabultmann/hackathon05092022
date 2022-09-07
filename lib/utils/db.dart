@@ -2,20 +2,17 @@ import 'package:hackathon/utils/project.dart';
 
 class DB {
   static const projects = {
-    1: 'Baustelle 1',
-    2: 'Baustelle 2',
-    3: 'Baustelle 3',
-    4: 'Baustelle 4',
-    5: 'Baustelle 5',
-    6: 'Baustelle 6',
-    7: 'Baustelle 7',
-    8: 'Baustelle 8',
-    9: 'Baustelle 9',
-    10: 'Baustelle 10',
-    11: 'Baustelle 11',
-    12: 'Baustelle 12',
-    13: 'Baustelle 13',
-    14: 'Baustelle 14',
+    1: 'Dreihöfe',
+    2: 'Am Obstgarten',
+    3: 'Am Hochkamp',
+    4: 'JVA Vechta',
+    5: 'Havenkant',
+    6: 'Core',
+    7: 'ARGE Kraftwerk Datteln',
+    8: 'Siebeneichen',
+    9: 'Meier Schulze',
+    10: 'Eurogate Terminal',
+    11: 'Wohnquatier Grüne Uhle'
   };
 
   static List<Project> getAllProjects() =>

@@ -1,20 +1,28 @@
 import 'package:flutter/material.dart';
 
-class Screen2 extends StatefulWidget {
-  const Screen2({Key? key}) : super(key: key);
+class ScreenControlled extends StatefulWidget {
+  const ScreenControlled({Key? key}) : super(key: key);
 
   @override
-  State<Screen2> createState() => _Screen2State();
+  State<ScreenControlled> createState() => _ScreenConrolledState();
 }
 
-class _Screen2State extends State<Screen2> {
+enum ButtonType { Start, Pause, End }
+
+class _ScreenConrolledState extends State<ScreenControlled> {
+  ButtonType pressed = ButtonType.End;
+
   @override
   Widget build(BuildContext context) {
     return Center(
         child: Column(
       children: [
         ElevatedButton(
-          onPressed: () {},
+          onPressed: pressed != ButtonType.Start
+              ? () {
+                  setState(() => pressed = ButtonType.Start);
+                }
+              : null,
           child:
               const Padding(padding: EdgeInsets.all(10), child: Text("Start")),
           style: ElevatedButton.styleFrom(
@@ -22,13 +30,21 @@ class _Screen2State extends State<Screen2> {
         ),
         SizedBox(height: 50),
         ElevatedButton(
-            onPressed: () {},
+            onPressed: pressed == ButtonType.Start
+                ? () {
+                    setState(() => pressed = ButtonType.Pause);
+                  }
+                : null,
             child: const Padding(
                 padding: EdgeInsets.all(10),
                 child: const Text("||", style: TextStyle(fontSize: 50)))),
         SizedBox(height: 50),
         ElevatedButton(
-          onPressed: () {},
+          onPressed: pressed != ButtonType.End
+              ? () {
+                  setState(() => pressed = ButtonType.End);
+                }
+              : null,
           child:
               const Padding(padding: EdgeInsets.all(10), child: Text("Stop")),
           style: ElevatedButton.styleFrom(

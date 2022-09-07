@@ -1,1 +1,1 @@
-enum Screen { Login, Timeline, Screen2, Screen3, ProjectSelection }
+enum Screen { Login, Timeline, Controlled, Automatic, ProjectSelection }

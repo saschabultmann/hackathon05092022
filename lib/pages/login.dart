@@ -26,7 +26,7 @@ class Loginscreen extends StatelessWidget {
           width: 250,
           child: ElevatedButton(
               onPressed: () => BlocProvider.of<PageBloc>(context)
-                  .add(PageChange(Screen.Screen2)),
+                  .add(PageChange(Screen.Controlled)),
               child:
                   const Text("Kontrolliert", style: TextStyle(fontSize: 30))),
         ),
@@ -36,7 +36,7 @@ class Loginscreen extends StatelessWidget {
           width: 250,
           child: ElevatedButton(
               onPressed: () => BlocProvider.of<PageBloc>(context)
-                  .add(PageChange(Screen.Screen3)),
+                  .add(PageChange(Screen.Automatic)),
               child:
                   const Text("Vollautomatik", style: TextStyle(fontSize: 30))),
         ),

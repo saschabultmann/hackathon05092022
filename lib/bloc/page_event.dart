@@ -4,7 +4,8 @@ abstract class PageEvent {}
 
 class PageChange extends PageEvent {
   final Screen screen;
-  PageChange(this.screen);
+  bool useFakeData;
+  PageChange(this.screen, {this.useFakeData = false});
 }
 
 class ProjectSelectionChange extends PageEvent {
