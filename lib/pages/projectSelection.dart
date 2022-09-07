@@ -38,15 +38,6 @@ class ProjectSelection extends StatelessWidget {
                   )
                   .toList(),
             ),
-            Align(
-                alignment: Alignment.bottomCenter,
-                child: ElevatedButton(
-                  child: const Text("Weiter"),
-                  onPressed: () => {
-                    BlocProvider.of<PageBloc>(context)
-                        .add(PageChange(Screen.Timeline))
-                  },
-                ))
           ],
         );
       },

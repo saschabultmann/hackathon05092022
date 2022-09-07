@@ -11,10 +11,12 @@ class Timeline extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-        child: Column(
-            children: List.generate(to - from + 1, (i) => i + from)
-                .map((e) => TimeWidget(value: "${e <= 9 ? "0$e" : e}:00"))
-                .toList()));
+      child: Column(
+        children: List.generate(to - from + 1, (i) => i + from)
+            .map((e) => TimeWidget(value: "${e <= 9 ? "0$e" : e}:00"))
+            .toList(),
+      ),
+    );
   }
 }
 

@@ -14,15 +14,25 @@ class _Screen2State extends State<Screen2> {
         child: Column(
       children: [
         ElevatedButton(
-          onPressed: null,
-          child: const Text("Start"),
-          style: ElevatedButton.styleFrom(primary: Colors.green),
+          onPressed: () {},
+          child:
+              const Padding(padding: EdgeInsets.all(10), child: Text("Start")),
+          style: ElevatedButton.styleFrom(
+              primary: Colors.green, textStyle: TextStyle(fontSize: 50)),
         ),
-        ElevatedButton(onPressed: null, child: const Text("||")),
+        SizedBox(height: 50),
         ElevatedButton(
-          onPressed: null,
-          child: const Text("Stop"),
-          style: ElevatedButton.styleFrom(primary: Colors.red),
+            onPressed: () {},
+            child: const Padding(
+                padding: EdgeInsets.all(10),
+                child: const Text("||", style: TextStyle(fontSize: 50)))),
+        SizedBox(height: 50),
+        ElevatedButton(
+          onPressed: () {},
+          child:
+              const Padding(padding: EdgeInsets.all(10), child: Text("Stop")),
+          style: ElevatedButton.styleFrom(
+              primary: Colors.red, textStyle: TextStyle(fontSize: 50)),
         ),
       ],
       mainAxisAlignment: MainAxisAlignment.center,

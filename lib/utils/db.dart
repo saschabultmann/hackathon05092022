@@ -8,6 +8,14 @@ class DB {
     4: 'Baustelle 4',
     5: 'Baustelle 5',
     6: 'Baustelle 6',
+    7: 'Baustelle 7',
+    8: 'Baustelle 8',
+    9: 'Baustelle 9',
+    10: 'Baustelle 10',
+    11: 'Baustelle 11',
+    12: 'Baustelle 12',
+    13: 'Baustelle 13',
+    14: 'Baustelle 14',
   };
 
   static List<Project> getAllProjects() =>

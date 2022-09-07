@@ -12,18 +12,34 @@ class Loginscreen extends StatelessWidget {
     return Center(
         child: Column(
       children: [
-        ElevatedButton(
-            onPressed: () => BlocProvider.of<PageBloc>(context)
-                .add(PageChange(Screen.ProjectSelection)),
-            child: const Text("Screen 1")),
-        ElevatedButton(
-            onPressed: () => BlocProvider.of<PageBloc>(context)
-                .add(PageChange(Screen.Screen2)),
-            child: const Text("Screen 2")),
-        ElevatedButton(
-            onPressed: () => BlocProvider.of<PageBloc>(context)
-                .add(PageChange(Screen.Screen3)),
-            child: const Text("Screen 3")),
+        SizedBox(
+          height: 70,
+          width: 250,
+          child: ElevatedButton(
+              onPressed: () => BlocProvider.of<PageBloc>(context)
+                  .add(PageChange(Screen.ProjectSelection)),
+              child: const Text("Manuell", style: TextStyle(fontSize: 30))),
+        ),
+        SizedBox(height: 50),
+        SizedBox(
+          height: 70,
+          width: 250,
+          child: ElevatedButton(
+              onPressed: () => BlocProvider.of<PageBloc>(context)
+                  .add(PageChange(Screen.Screen2)),
+              child:
+                  const Text("Kontrolliert", style: TextStyle(fontSize: 30))),
+        ),
+        SizedBox(height: 50),
+        SizedBox(
+          height: 70,
+          width: 250,
+          child: ElevatedButton(
+              onPressed: () => BlocProvider.of<PageBloc>(context)
+                  .add(PageChange(Screen.Screen3)),
+              child:
+                  const Text("Vollautomatik", style: TextStyle(fontSize: 30))),
+        ),
       ],
       mainAxisAlignment: MainAxisAlignment.center,
     ));

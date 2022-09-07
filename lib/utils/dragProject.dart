@@ -1,6 +1,8 @@
 class DragProject {
-  DragProject(this.projectId, this.duration);
+  DragProject(this.projectId, this.duration, this.isRealBreak);
 
-  final int projectId;
-  final int duration;
+  final int? projectId;
+  int duration;
+  bool isRealBreak;
+  bool get isBreak => projectId == null;
 }

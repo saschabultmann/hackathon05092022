@@ -64,6 +64,27 @@ class _MyHomePageState extends State<MyHomePage> {
             title: Text(widget.title),
           ),
           body: renderScreen(state.screen),
+          floatingActionButton: state.screen == Screen.Timeline ||
+                  state.screen == Screen.ProjectSelection
+              ? FloatingActionButton.extended(
+                  onPressed: () {
+                    if (state.screen == Screen.ProjectSelection) {
+                      BlocProvider.of<PageBloc>(context)
+                          .add(PageChange(Screen.Timeline));
+                    } else {
+                      BlocProvider.of<PageBloc>(context)
+                          .add(PageChange(Screen.Login));
+                    }
+                  },
+                  label: state.screen == Screen.ProjectSelection
+                      ? Text("Weiter")
+                      : Text('Senden'),
+                  icon: state.screen == Screen.ProjectSelection
+                      ? null
+                      : Icon(Icons.check),
+                  backgroundColor: Colors.green,
+                )
+              : null,
         );
       },
     );

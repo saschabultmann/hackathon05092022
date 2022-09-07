@@ -27,3 +27,10 @@ class MoveProject extends PageEvent {
   final int newIndex;
   MoveProject(this.oldIndex, this.newIndex);
 }
+
+class StartDrag extends PageEvent {}
+
+class AddBreak extends PageEvent {
+  final DragProject project;
+  AddBreak(this.project);
+}
