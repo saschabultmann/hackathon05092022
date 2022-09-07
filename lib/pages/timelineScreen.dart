@@ -145,12 +145,16 @@ class Project extends StatelessWidget {
         ),
         child: Column(
           children: [
-            Text(DB.getProjectById(project.projectId!).name,
-                overflow: TextOverflow.ellipsis,
-                style: TextStyle(
-                    fontSize: (project.duration > 40
-                        ? 30
-                        : project.duration.toDouble() - 10))),
+            Padding(
+              padding: const EdgeInsets.only(left: 10, right: 10),
+              child: Text(DB.getProjectById(project.projectId!).name,
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: (project.duration > 40
+                          ? 30
+                          : project.duration.toDouble() - 10))),
+            ),
           ],
           mainAxisAlignment: MainAxisAlignment.center,
         ),

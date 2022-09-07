@@ -36,7 +36,7 @@ class Bubble extends StatelessWidget {
               child: Text(
                 project.name,
                 style: TextStyle(
-                    fontSize: 15,
+                    fontSize: 20,
                     color: selectionIndex >= 0 ? Colors.white : Colors.blue),
               ),
             ),
@@ -45,7 +45,8 @@ class Bubble extends StatelessWidget {
                     top: 0,
                     right: 5,
                     child: Container(
-                        child: Text((selectionIndex + 1).toString()),
+                        child: Text((selectionIndex + 1).toString(),
+                            style: TextStyle(fontSize: 20)),
                         padding: const EdgeInsets.all(5),
                         decoration: BoxDecoration(
                             shape: BoxShape.circle,

@@ -23,7 +23,7 @@ class AddPauseContent extends StatelessWidget {
       width: 50,
       child: Container(
         decoration:
-            const BoxDecoration(shape: BoxShape.circle, color: Colors.blue),
+            const BoxDecoration(shape: BoxShape.circle, color: Colors.grey),
         child: const Center(
           child: Icon(
             Icons.pause,
